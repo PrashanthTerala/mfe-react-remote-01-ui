@@ -19,7 +19,11 @@ export const Dashboard = () => {
           tenetur maxime temporibus numquam.
         </p>
       </div>
-      <section className="dashboard"></section>
+      <section className="dashboard">
+        <div onClick={() => alert("Parent")}>
+          <button onClick={() => alert("Child")}>ClickMe</button>
+        </div>
+      </section>
     </section>
   );
 };

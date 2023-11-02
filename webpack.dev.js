@@ -5,6 +5,8 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { ModuleFederationPlugin } = require("webpack").container;
 const deps = require("./package.json").dependencies;
 
+const appName = "remoteUi01";
+
 module.exports = merge(
   commonconfig,
   (module.exports = {
@@ -30,7 +32,7 @@ module.exports = merge(
         path: "/",
       }),
       new ModuleFederationPlugin({
-        name: "mfe_react_remote_01_ui",
+        name: appName,
         filename: "remoteEntry.js",
         remotes: {},
         exposes: {
